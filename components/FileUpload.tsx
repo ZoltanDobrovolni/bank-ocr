@@ -12,7 +12,8 @@ const FileUpload: FC = () => {
     if (files && files.length > 0) {
       try {
         const content = await readFileContent(files[0]);
-        parseFile(content);
+        const charactersInStringMatrix = await parseFile(content);
+        // const accountNumbers = getValidAccountNumbers(charactersInStringMatrix);
       } catch (error) {
         console.log(error);
       }
